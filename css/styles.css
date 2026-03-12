@@ -1,9 +1,25 @@
-body{
-font-family: Arial;
-background:#f4f4f4;
-text-align:center;
-}
+/* CSS Document */
+body{padding:0px; margin:0px; background:#fff; color:#616161; font:10px/14px Tahoma, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
 
-h1{
-color:pink;
-}
+.clear {clear: both; margin: 0px; height:0}
+
+p a{font:10px/14px Tahoma, sans-serif; color:#9d1263; text-decoration:underline;}
+p a:hover{ color:#868e36; text-decoration:none;}
+
+.headline{font:10px/14px Tahoma, Geneva, sans-serif; color:#868e36; font-weight:bold}
+.headline2{font:10px/14px Tahoma, Geneva, sans-serif; color:#9d1263; font-weight:bold}
+
+#container{width:685px; position:relative; margin:0 auto;}
+
+/* top */
+
+#topLine{width:685px; height:14px; background:#e9e9e9;}
+
+/* logo*/
+
+#logoPan{width:685px; height:92px; position:relative}
+
+#logoPan img#logo{position:absolute; top:0; left:19px}
+#logoPan img#slogan{position:absolute; top:35px; left:400px}
