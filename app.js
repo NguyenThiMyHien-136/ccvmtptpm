@@ -1,14 +1,16 @@
-const http = require("http")
-const fs = require("fs")
+const express = require('express');
+const path = require('path');
 
-const server = http.createServer((req, res) => {
-    fs.readFile("index.html", (err, data) => {
-        res.writeHead(200, { "Content-Type": "text/html" })
-        res.write(data)
-        res.end()
-    })
-})
+const app = express();
+const PORT = 3000;
 
-server.listen(3000, () => {
-    console.log("Server running at http://localhost:3000")
-})
+// Cho phép truy cập thư mục chứa HTML, CSS, images
+app.use(express.static(path.join(__dirname)));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
